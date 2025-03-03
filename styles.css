@@ -121,6 +121,10 @@ aside {
   margin: 0px 0px;
 }
 
+.nav-list li {
+  margin: 10px 0px;
+}
+
 .nav-list li a {
   font-family: 'Neue Einstellung', sans-serif;
   font-weight: 800;
@@ -137,20 +141,79 @@ aside {
   transition: background-color 0.2s ease, color .2s ease, margin .5s ease;
 }
 
+.nav-list li a.active {
+  background-color: #1dbdbb;
+  color: #fff3e1; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin: 0px -20px 18px;
+}
+
+.nav-list li a:hover {
+  background-color: #1dbdbb;
+  color: #fff3e1; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin: 0px -20px 18px -10px;
+}
+
+main {
+  color: #2f272a;
+  grid-area: m;
+  padding: 50px;
+  margin: 0px 30px;
+}
+
+header .h {
+    display: flex;
+}
+
+header .logo img {
+  max-width: 225px;
+  flex-shrink: 20;
+  height: auto;
+  margin: 10px 5px;
+}
+
+header .text {
+  color: #2f272a;
+  flex-grow: 1;
+  white-space: nowrap;
+  text-align: center;
+  margin-top: 35px;
+  margin-right: 100px;
+}
+
+header .text h1, header .text h2 {
+  margin: 0;
+}
+
 header h1 {
-    font-family: 'Neue Einstellung', sans-serif;
-    font-weight: 100;
-    font-size: 30px;
+  font-family: 'Neue Einstellung', sans-serif;
+  font-weight: 100;
+  font-size: 30px;
 }
 
 header h2 {
-    font-family: 'Neue Einstellung', sans-serif;
-    font-weight: 900;
-    font-size: 16px;
+  font-family: 'Neue Einstellung', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
 }
 
 h3 {
-    font-family: 'Neue Einstellung', sans-serif;
-    font-weight: 800;
-    text-align: center;
+  font-family: 'Neue Einstellung', sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+footer {
+  background-color: #2f272a;
+  color: #fff3e1;
+  grid-area: f;
+  text-align: center;
+  padding: 5px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0px;
 }
