@@ -1,8 +1,56 @@
 @font-face {
   font-family: 'Neue Einstellung';
+  src: url('/fonts/NeueEinstellung-Thin.woff2') format('woff2'),
+       url('/fonts/NeueEinstellung-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Einstellung';
+  src: url('/fonts/NeueEinstellung-ExtraLight.woff2') format('woff2'),
+       url('/fonts/NeueEinstellung-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Einstellung';
+  src: url('/fonts/NeueEinstellung-Light.woff2') format('woff2'),
+       url('/fonts/NeueEinstellung-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Einstellung';
   src: url('/fonts/NeueEinstellung-Regular.woff2') format('woff2'),
        url('/fonts/NeueEinstellung-Regular.woff') format('woff');
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Einstellung';
+  src: url('/fonts/NeueEinstellung-Medium.woff2') format('woff2'),
+       url('/fonts/NeueEinstellung-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Einstellung';
+  src: url('/fonts/NeueEinstellung-SemiBold.woff2') format('woff2'),
+       url('/fonts/NeueEinstellung-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Einstellung';
+  src: url('/fonts/NeueEinstellung-Bold.woff2') format('woff2'),
+       url('/fonts/NeueEinstellung-Bold.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -22,13 +70,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Neue Einstellung';
-  src: url('/fonts/NeueEinstellung-Thin.woff2') format('woff2'),
-       url('/fonts/NeueEinstellung-Thin.woff') format('woff');
-  font-weight: 100;
-  font-style: normal;
-}
 
 body {
 font-family: 'Neue Einstellung', sans-serif;
@@ -43,131 +84,140 @@ color: #2f272a;
 
 .container {
   display: grid;
-  grid-template-rows: 140px auto 50px;
-  grid-template-columns: 175px auto;
+  grid-template-rows: 120px 75px auto 50px;
+  grid-template-columns: auto;
   gap: 0px;
   margin: 0px auto;
   height: 100vh;
   grid-template-areas:
-  "h h"
-  "s m"
-  "f f";
+  "h"
+  "s"
+  "m"
+  "f";
 }
 
 header {
-background-color: #cf5533;
-background-image: url(./texture-woodgrain.png);
-background-repeat: repeat;
-background-size: auto auto;
-color: #2f272a;
-padding: 0px;
-grid-area: h;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-display: flex;
-align-items: start;
-justify-content: space-between;
-padding: 0 20px;
+  grid-area: h;
+  background-color: #cf5533;
+  background-image: url(./texture-woodgrain.png);
+  background-repeat: repeat;
+  background-size: auto auto;
+  color: #2f272a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  position: relative; /* Add this line */
+  z-index: 5; /* Add this line */
 }
 
 aside {
   grid-area: s;
-  padding: 0px;
-  margin-top: 85px;
+  padding: 0px 0px;
+  margin-top: 0px;
+}
+
+nav {
+  grid-area: s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-list {
-list-style-type: none;
-padding: 0px;
-margin: 0px 0px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
 }
 
 .nav-list li {
-margin: 10px 0px;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-list li a {
-font-family: 'Neue Einstellung', sans-serif;
-font-weight: 800;
-font-size: 26px;
-text-decoration: none;
-color: #2f272a;
-background-color: #eaa133;
-border-radius: 10px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-padding: 4px 15px;
-display: block;
-text-align: right;
-margin: 0px 24px 18px -10px;
-transition: background-color 0.2s ease, color .2s ease, margin .5s ease;
-}
-
-header h1 {
   font-family: 'Neue Einstellung', sans-serif;
-  font-weight: 100;
-  font-size: 30px;
-}
-
-header h2 {
-  font-family: 'Neue Einstellung', sans-serif;
-  font-weight: 900;
-  font-size: 16px;
-}
-
-h3 {
-  font-family: 'Neue Einstellung', sans-serif;
-  font-weight: 800;
+  font-weight: 600;
+  font-size: 26px;
+  text-decoration: none;
+  color: #2f272a;
+  background-color: #eaa133;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 4px 15px;
+  display: block;
   text-align: center;
-}
-
-footer {
-background-color: #2f272a;
-color: #fff3e1;
-grid-area: f;
-text-align: center;
-padding: 5px;
-}
-
-p {
-margin: 0;
-padding: 0;
-margin-bottom: 0px;
+  transition: background-color 0.2s ease, color 0.2s ease, margin 0.5s ease;
+  height: 50px; /* Adjust height as needed */
+  position: relative;
+  top: -15px; /* Adjust to hide the top behind the header */
+  display: flex;
+  align-items: flex-end; /* Align text to the bottom */
+  padding-bottom: 10px; /* Adjust padding as needed */
+  z-index: 4;
 }
 
 @media (max-width: 768px) {
-.container {
-  grid-template-rows: auto auto auto;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "h"
-    "m"
-    "s"
-    "f";
+  .container {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "s"
+      "m"
+      "f";
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+
+  header .text {
+    margin-top: auto;
+    margin-right: 0;
+    margin-bottom: auto;
+    text-align: center;
+  }
+
+  .nav-list {
+    justify-content: space-between;
+    flex-direction: row;
+    width: 75%;
+    gap: 7px; /* Adjust gap between items */
+  }
+
+  .nav-list li {
+    margin: 0;
+  }
+
+  .nav-list li a {
+    font-size: 20px;
+    justify-content: center;
+    padding: 5px;
+    padding-bottom: 10PX;
+    margin: 0;
+    height: 70px; /* Adjust height for smaller screens */
+    top: -10px; /* Adjust to hide the top behind the header */
+    width: 75px; /* Adjust width for smaller screens */
+  }
+
+  main {
+    padding-top: 0px;
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+
+  footer {
+    padding: 5px;
+    text-size-adjust: 70%;
+  }
 }
 
-header {
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-}
-
-header .text {
-  margin-top: 10px;
-  margin-right: 0;
-  text-align: center;
-}
-
-.nav-list li a {
-  font-size: 20px;
-  padding: 10px;
-  margin: 0px 10px 10px 0px;
-}
-
-main {
-  padding: 20px;
-  margin: 0px 10px;
-}
-
-footer {
-  padding: 10px;
-}
-}

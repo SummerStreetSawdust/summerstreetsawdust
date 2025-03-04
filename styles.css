@@ -127,7 +127,7 @@ aside {
 
 .nav-list li a {
   font-family: 'Neue Einstellung', sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 26px;
   text-decoration: none;
   color: #2f272a;
@@ -188,7 +188,7 @@ header .text h1, header .text h2 {
 
 header h1 {
   font-family: 'Neue Einstellung', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 30px;
 }
 
